@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
         <!-- Payment form starts here -->
-        <form id="paymentForm" action="action/add_payment.php" method="POST">
+        <form id="paymentForm"  method="POST">
           <div class="mb-3">
             <label for="paymentDate" class="form-label">Payment Date</label>
             <input type="date" class="form-control" id="paymentDate" name="paymentDate" required>
@@ -17,10 +17,11 @@
             <label for="amount" class="form-label">Amount</label>
             <input type="number" class="form-control" id="amount" name="amount" required>
           </div>
+          
           <div class="mb-3">
-            <label for="received_by" class="form-label">Received By</label>
-            <input type="text" class="form-control" id="received_by" name="received_by" required>
-          </div>
+            <input type="hidden" name="paymentperson_id" id="paymentperson_id" value="">
+            </div>
+
           <div class="mb-3">
             <label for="paymentMode" class="form-label">Payment Mode</label>
             <select class="form-select" id="paymentMode" name="paymentMode" required>

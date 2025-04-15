@@ -11,8 +11,9 @@
 	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet"/>
-	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="assets/css/traineeCss.css"> 
+	
 	<!-- loader-->
 	<link href="assets/css/pace.min.css" rel="stylesheet"/>
 	<script srcas="../sets/js/pace.min.js"></script>
@@ -25,10 +26,12 @@
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="assets/css/icons.css" rel="stylesheet">
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+	
 	<!-- Bootstrap CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 
 	<!-- Theme Style CSS -->
 	<link rel="stylesheet" href="assets/css/dark-theme.css"/>
@@ -48,8 +51,7 @@
         <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
         <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
         <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-        <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-        <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+		<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
         <!-- Include Bootstrap JS (with Popper) -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
@@ -59,6 +61,10 @@
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="js_functions/trainee.js" type="text/javascript"></script>
+  <!-- jsPDF & html2canvas CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 <title>NEXGEN IT ACADEMY</title>
 	<style>
 	.tableproceess{
@@ -117,4 +123,6 @@ table {
 	</style>
 	
 
+
+   
 </head>

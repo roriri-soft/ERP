@@ -68,7 +68,7 @@
 				</li> -->
 				
 				<li>
-					<a href="payment.php">
+					<a href="paymentReport.php">
 						<div class="parent-icon"><i class="lni lni-wallet me-2"></i></div>
 						<div class="menu-title">Payment Report</div>
 					</a>
