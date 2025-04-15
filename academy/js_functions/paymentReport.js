@@ -1,3 +1,16 @@
+let dataTable;
+
+$(document).ready(function () {
+    // Initialize DataTable and store the instance
+    dataTable = $('#addTraineeTable').DataTable({
+        "pageLength": 8,
+        "lengthChange": false,
+        "ordering": true,
+        "searching": true,
+        "paging": true
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const filterBtn = document.getElementById("filterBtn");
     const clearBtn = document.getElementById("clearBtn");
@@ -12,14 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const payment_date = document.getElementById("reportPaymentDate").value;
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "action/filter_payment.php", true);
+        xhr.open("POST", "action/paymentReport.php", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
         xhr.onload = function () {
             if (xhr.status === 200) {
                 const tbody = document.querySelector("#addTraineeTable tbody");
                 if (tbody) {
+                    // Destroy existing DataTable before updating
+                    if ($.fn.DataTable.isDataTable('#addTraineeTable')) {
+                        dataTable.destroy();
+                    }
+
                     tbody.innerHTML = xhr.responseText;
+
+                    // Reinitialize DataTable after updating rows
+                    dataTable = $('#addTraineeTable').DataTable({
+                        "pageLength": 8,
+                        "lengthChange": false,
+                        "ordering": true,
+                        "searching": true,
+                        "paging": true
+                    });
                 }
             } else {
                 alert("Error fetching payment data.");
@@ -33,14 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
     clearBtn.addEventListener("click", function (e) {
         e.preventDefault();
 
-        // Clear filters
         document.getElementById("person_id").value = "";
         document.getElementById("courseFilter").value = "";
         document.getElementById("reportPaymentDate").value = "";
 
-        // Reload all data
-        filterBtn.click();
+        filterBtn.click(); // reload all data
     });
 });
-
-

@@ -4,11 +4,11 @@
 ?>
 <!doctype html>
 <html lang="en">
-  <?php include("head.php"); ?>
+  <?php include("include/head.php"); ?>
   <body>
     <div class="wrapper">
-      <?php include("top.php");?>
-      <?php include("left.php");?>
+      <?php include("include/top.php");?>
+      <?php include("include/left.php");?>
       <div class="page-wrapper">
         <div class="page-content">
           <div class="page-title-box">
@@ -168,7 +168,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade active show" id="payment" role="tabpanel" aria-labelledby="payment-tab">
                   <div class="d-flex justify-content-end mb-3">
-                    <button type="button"  class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#PaymenttraineeModal">Add Payment</button>
+                    <button type="button"  class="btn btn-primary" data-bs-toggle="modal" data-id="<?php echo $row['person_id']; ?>"  data-bs-target="#PaymenttraineeModal">Add Payment</button>
                   </div>
                   <div class="table-responsive">
                     <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
@@ -201,16 +201,22 @@
                               </tr>
                             </thead>
                             <tbody>
-                            <?php $i=1; while($row = mysqli_fetch_assoc($resPayment)): ?>
+                            <?php $i=1; while($row = mysqli_fetch_assoc($viewTrainee)): ?>
 
                               <tr>
                                 <td> <?php echo $i; $i++; ?></td>
-                                <td><?php echo date('d-m-Y', strtotime($row['created_at'])); ?></td>
-                                <td><?php echo $row['person_name']; ?></td>
-                                <td><?php echo $row['payment_mode']; ?></td>
-                               <td><?php echo $row['created_by']; ?></td>
-                              <td>₹<?php echo number_format($row['paid_amount'], 2); ?></td>
-                                           
+                                <td><?php echo date('d-m-Y', strtotime($row['payment_date'])); ?></td>
+                                <td>₹<?php echo $row['paid_amount']; ?></td>
+                                <td><?php echo $row['received_by']; ?></td>
+                               <td><?php echo $row['payment_mode']; ?></td>
+                               <td>
+                                  <a href="traineeReceipt.php?id=<?php echo $row['fee_paid_id']; ?>;">
+                                      <button class="btn btn-primary btn-sm m-1">
+                                          <i class="ph ph-download"></i> Bill PDF
+                                      </button>
+                                  </a>
+                              </td>
+                                          
                               </tr>
                             <?php endwhile; ?>
                             </tbody>
@@ -272,9 +278,9 @@
             </div>
           </div>
         </div>
-        <?php include("modal/add_payment.php");?>
+        <?php include("modal/paymentTrainee.php");?>
       </div>
-      <?php include("footer.php"); ?>
+      <?php include("include/footer.php"); ?>
     </div>
     <script>
       document.getElementById("loginForm").addEventListener("submit", function(e) {
@@ -311,6 +317,36 @@
             title: 'Oops...',
             text: 'Something went wrong!',
             confirmButtonText: 'OK'
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById('PaymenttraineeModal');
+
+        modal.addEventListener('show.bs.modal', function (event) {
+          var button = event.relatedTarget;
+          var personId = button.getAttribute('data-id');
+          
+          // Set the value in hidden input
+          document.getElementById('paymentperson_id').value = personId;
+        });
+      });
+      $(document).ready(function() {
+        $('#paymentForm').on('submit', function(e) {
+          e.preventDefault(); // Stop normal form submission
+          $.ajax({
+            url: 'action/paymentTrainee.php', // Your PHP file path
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+              alert(response); // Show success message
+              location.reload();
+              $('#PaymenttraineeModal').modal('hide'); // Close modal
+              $('#paymentForm')[0].reset(); // Reset form
+            },
+            error: function(xhr, status, error) {
+              alert("Something went wrong: " + error);
+            }
           });
         });
       });

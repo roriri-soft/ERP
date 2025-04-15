@@ -5,16 +5,16 @@
 <!doctype html>
 <html lang="en">
 
-<?php include("head.php");?>
+<?php include("include/head.php");?>
 
 <body>
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-			<?php include("left.php");?>
+			<?php include("include/left.php");?>
 		<!--end sidebar wrapper -->
 		<!--start header -->
-			<?php include("top.php");?>
+			<?php include("include/top.php");?>
 		<!--end header -->
         
 		<!--start page wrapper -->
@@ -137,9 +137,8 @@
 		<!--Start Back To Top Button-->
 		  <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
-		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2024. All right reserved.</p>
-		</footer>
+        <?php include("include/footer.php");?>
+
 	</div>
 	<!--end wrapper-->
 
