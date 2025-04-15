@@ -10,7 +10,7 @@
 	<link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
 	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
 	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
 	<link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/traineeCss.css"> 
 	<!-- loader-->
@@ -44,7 +44,7 @@
         <!--plugins-->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-        <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.js"></script>
         <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
         <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
