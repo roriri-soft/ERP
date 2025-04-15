@@ -100,7 +100,7 @@
                                                     <i class="bi bi-book"></i>
                                                 </button>
                                             </a>
-                                            <a href="listApplication.php?traineeId=<?php echo $row['id']; ?>">
+                                            <!-- <a href="listApplication.php?traineeId=<?php echo $row['id']; ?>">
                                                 <button class="coustome_btn text-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Application">
                                                     <i class="bi bi-file-text"></i>
                                                 </button>
@@ -109,7 +109,7 @@
                                                 <button class="coustome_btn text-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Projects">
                                                     <i class="bi bi-diagram-3"></i>
                                                 </button>
-                                            </a>
+                                            </a> -->
                                         </td>
                                     </tr>
                                     <?php
