@@ -1,5 +1,6 @@
-let dataTable;
 
+
+let dataTable;
 $(document).ready(function () {
     // Initialize DataTable and store the instance
     dataTable = $('#addTraineeTable').DataTable({
