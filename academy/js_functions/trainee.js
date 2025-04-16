@@ -63,19 +63,19 @@ $(document).ready(function () {
         e.preventDefault();
         var formData = new FormData(this);
         $.ajax({
-            url: 'action/trainee.php',
+            url: 'action/trainee.php', 
             type: 'POST',
             data: formData,
-            contentType: false,
-            processData: false,
-            success: function (response) {
+            contentType: false,  
+            processData: false,  
+            success: function(response) {
                 if (response == 'success') {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Trainee added successfully.',
                         icon: 'success',
                         confirmButtonText: 'OK'
-                    }).then(function () {
+                    }).then(function() {
                         $('#addTraineeModal').modal('hide');
                         $('#addTrainee')[0].reset();
                         location.reload();
@@ -89,7 +89,7 @@ $(document).ready(function () {
                     });
                 }
             },
-            error: function (xhr, status, error) {
+            error: function(xhr, status, error) {
                 Swal.fire({
                     title: 'Error!',
                     text: 'There was an issue with the request.',
@@ -99,7 +99,9 @@ $(document).ready(function () {
             }
         });
     });
+});
 
+<<<<<<< HEAD
 // edit modal for trainee
 
 
@@ -141,3 +143,6 @@ $(document).ready(function () {
     });
 });
 
+=======
+  
+>>>>>>> e8e16f48882e38147bd6edc826f9b1833913f827

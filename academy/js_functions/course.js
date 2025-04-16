@@ -95,32 +95,51 @@ function goDeleteCourse(course_id) {
       }
   });
 }
-
-//add course
-$(document).ready(function () {
-  $('#addCourseForm').on('submit', function (e) {
-    e.preventDefault();
-
-    $.ajax({
-      url: 'action/add_course.php', // your PHP backend
-      type: 'POST',
-      data: $(this).serialize(),
-      success: function (response) {
-        if (response.trim() === 'success') {
+$('#addCourseForm').on('submit', function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: 'action/add_course.php',
+    type: 'POST',
+    data: $(this).serialize(),
+    success: function(response) {
+      if (response == 'success') {
           Swal.fire({
-            icon: 'success',
-            title: 'Course Added',
-            text: 'Course has been added successfully!',
-            timer: 1500,
-            showConfirmButton: false
+              title: 'Success!',
+              text: 'Course added successfully.',
+              icon: 'success',
+              confirmButtonText: 'OK'
+          }).then(function() {
+              $('#staticBackdrop').modal('hide');
+              $('#addCourseForm')[0].reset();
+              location.reload();
           });
-          $('#staticBackdrop').modal('hide');
-          $('#addCourseForm')[0].reset();
-          location.reload(); // or use AJAX to reload just the table
-        } else {
-          Swal.fire('Error', response, 'error');
-        }
+      } else {
+          Swal.fire({
+              title: 'Error!',
+              text: response,
+              icon: 'error',
+              confirmButtonText: 'Try Again'
+          });
       }
-    });
+    },
+    error: function(xhr, status, error) {
+        Swal.fire({
+            title: 'Error!',
+            text: 'There was an issue with the request.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+    }
   });
 });
+
+$(document).ready(function() {
+  $('#duration').select2({
+    placeholder: "Select durations",
+    allowClear: true,
+    width: '100%',
+    dropdownParent: $('#staticBackdrop') // 👈 set this to your modal ID
+  });
+});
+
+

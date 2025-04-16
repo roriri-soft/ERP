@@ -31,11 +31,9 @@
 //         c.description AS course_description,
 //         c2.incharge AS incharger,
         
-//         pfp.id AS payment_id,
+//         pfp.id AS fee_paid_id,
 //         pfp.paid_amount,
-//         pfp.payment_mode,
-//         pfp.payment_date,
-//         p2.name as received_by 
+//         pfp2.created_by 
         
 //         FROM person p
 //         JOIN person_details pd ON p.id = pd.person_id
@@ -44,8 +42,8 @@
 //         LEFT JOIN course_fee cf ON cf.id = pc.course_fee_id
 //         LEFT JOIN course c ON c.id = cf.course_id
 //         LEFT JOIN course c2 ON c2.incharge = p.id
-//         LEFT JOIN payment pfp ON pfp.person_course_id = pc.id
-//         left join person p2 on pfp.received_by = p2.id
+//         LEFT JOIN person_fee_paid pfp ON pfp.person_course_id = pc.id
+//         LEFT JOIN person_fee_paid pfp2 ON pfp2.created_by = p.id;
 
     if (isset($_GET['id'])) {
         $viewedPersonId = intval($_GET['id']);
@@ -55,7 +53,4 @@
 
     $queryView = "SELECT * FROM viewtrainee WHERE person_id = $viewedPersonId";
     $viewTrainee = mysqli_query($conn, $queryView);
-    $queryView = "SELECT * FROM viewtrainee WHERE person_id = $viewedPersonId";
-    $viewTrainee = mysqli_query($conn, $queryView);
-
 ?>
