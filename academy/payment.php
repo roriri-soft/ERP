@@ -35,11 +35,7 @@
                         <option value="">-- Select Trainee --</option>
                         <?php
                             include("config.php");
-                            $query = "SELECT p.name, p.id 
-                                    FROM person p 
-                                    JOIN person_roles pr ON pr.person_id = p.id 
-                                    JOIN role r ON r.id = pr.role_id 
-                                    WHERE r.name = 'Trainee'";
+                            $query = "SELECT id, name FROM person WHERE status = 1 ORDER BY name ASC";
                             $result = mysqli_query($conn, $query);
 
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -96,10 +92,10 @@
                                     <?php $i=1; while($row = mysqli_fetch_assoc($resPayment)): ?>
                                         <tr>
                                             <td> <?php echo $i; $i++; ?></td>
-                                            <td><?php echo date('d-m-Y', strtotime($row['payment_date'])); ?></td>
+                                            <td><?php echo date('d-m-Y', strtotime($row['created_at'])); ?></td>
                                             <td><?php echo $row['person_name']; ?></td>
                                             <td><?php echo $row['payment_mode']; ?></td>
-                                            <td><?php echo $row['received_by']; ?></td>
+                                            <td><?php echo $row['created_by']; ?></td>
                                             <td>₹<?php echo number_format($row['paid_amount'], 2); ?></td>
                                            
                                         </tr>

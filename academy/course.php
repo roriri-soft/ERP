@@ -5,16 +5,16 @@
 <!doctype html>
 <html lang="en">
 
-<?php include("include/head.php");?>
+<?php include("head.php");?>
 
 <body>
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-			<?php include("include/left.php");?>
+			<?php include("left.php");?>
 		<!--end sidebar wrapper -->
 		<!--start header -->
-			<?php include("include/top.php");?>
+			<?php include("top.php");?>
 		<!--end header -->
         
 		<!--start page wrapper -->
@@ -59,7 +59,6 @@
                                             <th class="sorting" tabindex="0" aria-controls="scroll-horizontal-datatable" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 124.953px;">Course</th>
                                             <th class="sorting" tabindex="0" aria-controls="scroll-horizontal-datatable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 285.125px;">Subject</th>
                                             <th class="sorting" tabindex="0" aria-controls="scroll-horizontal-datatable" rowspan="1" colspan="1" aria-label="Mobile: activate to sort column ascending" style="width: 147.938px;">Duration</th>
-                                            <th class="sorting" tabindex="0" aria-controls="scroll-horizontal-datatable" rowspan="1" colspan="1" aria-label="Mobile: activate to sort column ascending" style="width: 147.938px;">Incharge Name</th>
 
                                             <th class="sorting" tabindex="0" aria-controls="scroll-horizontal-datatable" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 285.125px;">Fees</th>
                                             <th class="sorting" tabindex="0" aria-controls="scroll-horizontal-datatable" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 303.766px;">Action</th></tr>
@@ -73,9 +72,9 @@
                                             <tr role="row" class="odd">
                                                 <td class="sorting_1"><?php  echo $sno; ?></td>
                                                 <td><?php echo $row['course_name']; ?></td>
-                                                <td><?php echo $row['subject_names']; ?></td>
+                                                <td><?php echo $row['subjects']; ?></td>
                                                 <td><?php echo $row['duration']; ?></td>
-                                                <td><?php echo $row['incharge_name']; ?></td>
+                                               
                                                 <td><?php echo $row['fee']; ?></td>
                                                 <td>
                                                     <button type="button" class="btn btn-circle btn-warning text-white modalBtn" onclick="goEditcourse(<?php echo $row['course_id']; ?>);" data-bs-toggle="modal" data-bs-target="#editCourseModal">
@@ -137,8 +136,9 @@
 		<!--Start Back To Top Button-->
 		  <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
-        <?php include("include/footer.php");?>
-
+		<footer class="page-footer">
+			<p class="mb-0">Copyright © 2024. All right reserved.</p>
+		</footer>
 	</div>
 	<!--end wrapper-->
 
@@ -190,6 +190,7 @@
 		</div>
 	  </div>
       <?php include("modal/course.php");?>
+      <script src="js_functions/course.js" type="text/javascript"></script>
     <!-- end search modal -->
 </body>
 </html>
