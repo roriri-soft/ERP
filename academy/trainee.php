@@ -3,11 +3,11 @@
 ?>
 <!doctype html>
 <html lang="en">
-<?php include("include/head.php"); ?>
+<?php include("head.php"); ?>
 <body>
     <div class="wrapper">
-        <?php include("include/top.php");?>
-        <?php include("include/left.php");?>
+        <?php include("top.php");?>
+        <?php include("left.php");?>
         <div class="page-wrapper">
             <div class="page-content">
                 <div class="page-title-box">
@@ -100,7 +100,7 @@
                                                     <i class="bi bi-book"></i>
                                                 </button>
                                             </a>
-                                            <!-- <a href="listApplication.php?traineeId=<?php echo $row['id']; ?>">
+                                            <a href="listApplication.php?traineeId=<?php echo $row['id']; ?>">
                                                 <button class="coustome_btn text-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Application">
                                                     <i class="bi bi-file-text"></i>
                                                 </button>
@@ -109,7 +109,7 @@
                                                 <button class="coustome_btn text-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Projects">
                                                     <i class="bi bi-diagram-3"></i>
                                                 </button>
-                                            </a> -->
+                                            </a>
                                         </td>
                                     </tr>
                                     <?php
@@ -129,11 +129,10 @@
                         </div>
                     </div>
                 </div>
-                <?php include("modal/trainee.php");?>
+                <?php include("modal/addTrainee.php");?>
             </div>
-            <?php include("include/footer.php"); ?>
+            <?php include("footer.php"); ?>
         </div>
     </div>
     </body>
 </html>
-

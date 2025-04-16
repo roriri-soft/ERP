@@ -5,17 +5,17 @@
 <!doctype html>
 <html lang="en">
 
-<?php include("include/head.php");?>
+<?php include("head.php");?>
 
 <body>
 
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-			<?php include("include/left.php");?>
+			<?php include("left.php");?>
 		<!--end sidebar wrapper -->
 		<!--start header -->
-			<?php include("include/top.php");?>
+			<?php include("top.php");?>
 		<!--end header -->
 		<!--start page wrapper -->
 		<div class="page-wrapper">
@@ -51,7 +51,7 @@
             </div>
             <?php include("modal/addsubject.php");?>
         </div>
-        <?php include("include/footer.php");?>
+        <?php include("footer.php");?>
     </div>
 </body>
 </html>

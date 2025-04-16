@@ -14,28 +14,25 @@
                 <input type="text" class="form-control" name="course_name" id="course_name" required>
             </div>
             <div class="mb-3">
-              <select id="courseFilter" class="form-select">
-                <option value="">-- incharge_name --</option>
-                    <?php
-                    $queryCourse = "SELECT p.name, p.id 
-                                    FROM person p 
-                                    JOIN person_roles pr ON pr.person_id = p.id 
-                                    JOIN role r ON r.id = pr.role_id 
-                                    WHERE r.name = 'Trainer'";
-                    
-                    $resCourse = mysqli_query($conn, $queryCourse);
-                    while ($rowCourse = mysqli_fetch_assoc($resCourse)) {
-                    ?>
-                        <option value='<?php echo $rowCourse['id']; ?>'><?php echo $rowCourse['name']; ?></option>
-                    <?php
-                    }
-                    mysqli_free_result($resCourse);
-                    ?>
-              </select>
+              <label class="form-label"><b>Select Subjects</b></label>
+              <div class="row">
+                <?php
+                $subjects = mysqli_query($conn, "SELECT id, name FROM subject");
+                while ($row = mysqli_fetch_assoc($subjects)) {
+                  echo '<div class="col-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="subjects[]" value="' . $row['id'] . '">
+                            <label class="form-check-label">' . $row['name'] . '</label>
+                          </div>
+                        </div>';
+                }
+                ?>
+              </div>
             </div>
+
             <div class="mb-3">
-              <select id="courseFilter" class="form-select">
-                <option value="">Duration </option>
+              <label for="duration" class="form-label">Duration</label>
+              <select id="duration" name="duration[]" class="form-select" multiple required>
                 <option value="1 month">1 month</option>
                 <option value="2 months">2 months</option>
                 <option value="3 months">3 months</option>
@@ -46,13 +43,11 @@
                 <option value="8 months">8 months</option>
                 <option value="9 months">9 months</option>
                 <option value="10 months">10 months</option>
-                <option value="9 months">11 months</option>
-                <option value="9 months">12 months</option>
+                <option value="11 months">11 months</option>
+                <option value="12 months">12 months</option>
               </select>
-          </div>
-          <div class="mb-3">        
-            <input type="number" class="form-control" id="fee" name="fee" placeholder="Enter fee amount" required>
-          </div>
+            </div>
+
       </div> 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

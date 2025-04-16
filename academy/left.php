@@ -46,26 +46,26 @@
 					</a>
 				</li>
 
-				<!-- <li>
+				<li>
 					<a href="assignApplication.php">
 						<div class="parent-icon"><i class="lni lni-stackoverflow"></i></div>
 						<div class="menu-title">Application</div>
 					</a>
-				</li> -->
+				</li>
 				
-				<!-- <li>
+				<li>
 					<a href="miniProject.php">
 						<div class="parent-icon"><i class="lni lni-clipboard"></i></div>
 						<div class="menu-title">Mini Project</div>
 					</a>
-				</li> -->
+				</li>
 				
-				<!-- <li>
+				<li>
 					<a href="complaint.php">
 						<div class="parent-icon"><i class="lni lni-customer me-2"></i></div>
 						<div class="menu-title">Complaint</div>
 					</a>
-				</li> -->
+				</li>
 				
 				<li>
 					<a href="payment.php">
@@ -74,7 +74,7 @@
 					</a>
 				</li>
 				
-					<!-- <li>
+					<li>
                             <a href="projectTask_trainee.php">
                                 <div class="parent-icon"><i class="fadeIn animated bx bx-user-check"></i></div>
                                 <div class="menu-title">Project Task</div>
@@ -86,7 +86,7 @@
                                 <div class="parent-icon"><i class="bx bx-line-chart me-2"></i></div>
                                 <div class="menu-title">Daily Work Update</div>
                             </a>
-                        </li> -->
+                        </li>
 					
 			</ul>
 			<!--end navigation-->
