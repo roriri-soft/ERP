@@ -5,17 +5,17 @@
 <!doctype html>
 <html lang="en">
 
-<?php include("head.php");?>
+<?php include("include/head.php");?>
 
 <body>
 
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-			<?php include("left.php");?>
+			<?php include("include/left.php");?>
 		<!--end sidebar wrapper -->
 		<!--start header -->
-			<?php include("top.php");?>
+			<?php include("include/top.php");?>
 		<!--end header -->
 		<!--start page wrapper -->
 		<div class="page-wrapper">
@@ -39,7 +39,6 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($subject['name']) ?></h5>
-                                    <p><strong>Status:</strong> <?= htmlspecialchars($subject['status']) ?></p>                                     
                                     <button type="button" class="btn btn-success text-white mb-2" onclick="window.location.href='syllabus.php?id=<?php echo $subject['id']; ?>';">                                            
                                     <i class="bx bx-book-open"></i> View Syllabus
                                     </button>
@@ -51,7 +50,7 @@
             </div>
             <?php include("modal/subject.php");?>
         </div>
-        <?php include("footer.php");?>
+        <?php include("include/footer.php");?>
     </div>
 </body>
 </html>

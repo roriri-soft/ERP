@@ -74,13 +74,6 @@
                                     <label><b>Discount</b></label>
                                     <input type="text" id="discount" class="form-control" readonly>
                                 </div>
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group pb-3">
-                                        <label for="fee_amount" class="form-label"><b>Fee Amount</b><span class="text-danger">*</span></label>
-                                        <input type="number" class="form-control" placeholder="Enter Fee Amount" name="fee_amount" id="fee_amount">
-                                        <div id="fee_amountError" style="color: red" class="error-message">Fee Amount is required.</div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>     
                         <div class="col-12 mt-2">
@@ -252,4 +245,3 @@
         </div>
     </div>
 </div>
-

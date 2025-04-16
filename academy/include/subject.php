@@ -11,12 +11,13 @@ FROM subject
 LEFT JOIN syllabus ON subject.id = syllabus.subject_id; -->
 <?php 
 include("config.php");
-$selQuery = "SELECT * FROM `course_with_subject`";
-$rescourse = mysqli_query($conn , $selQuery);
+$selQuery = "SELECT * FROM `subject_with_syllabus`";
+$res_course = mysqli_query($conn , $selQuery);
 
 // Group syllabus by subject
 $subjects = [];
-while ($row = mysqli_fetch_assoc($rescourse)) {
+while ($row = mysqli_fetch_assoc($res_course)) {
+    $subjectId = $row['subject_id'];
     if (!isset($subjects[$subjectId])) {
         $subjects[$subjectId] = [
             'name' => $row['subject_name'],
