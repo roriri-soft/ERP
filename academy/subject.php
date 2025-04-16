@@ -49,7 +49,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <?php include("modal/addsubject.php");?>
+            <?php include("modal/subject.php");?>
         </div>
         <?php include("footer.php");?>
     </div>
