@@ -7,15 +7,15 @@
 
 <!doctype html>
 <html lang="en">	
-	<?php include("head.php"); ?>
+	<?php include("include/head.php"); ?>
 <body>
 	<!--wrapper-->
 	<div class="wrapper">
 		<!--sidebar wrapper -->
-			<?php include "left.php";?>
+			<?php include "include/left.php";?>
 		<!--end sidebar wrapper -->
 		<!--start header -->
-			<?php include "top.php";?>
+			<?php include "include/top.php";?>
 		<!--end header -->
 		<!--start page wrapper -->
 		<div class="page-wrapper">
@@ -356,7 +356,7 @@
 		
 		<!--end page wrapper -->
 		<!--start overlay-->
-		 <?php include "footer.php"; ?>
+		 <?php include "include/footer.php"; ?>
 	</div>
 	<!--end wrapper-->
 

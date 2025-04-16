@@ -4,11 +4,11 @@
 ?>
 <!doctype html>
 <html lang="en">
-  <?php include("head.php"); ?>
+  <?php include("include/head.php"); ?>
   <body>
     <div class="wrapper">
-      <?php include("top.php");?>
-      <?php include("left.php");?>
+      <?php include("include/top.php");?>
+      <?php include("include/left.php");?>
       <div class="page-wrapper">
         <div class="page-content">
           <div class="page-title-box">
@@ -274,7 +274,7 @@
         </div>
         <?php include("modal/add_payment.php");?>
       </div>
-      <?php include("footer.php"); ?>
+      <?php include("include/footer.php"); ?>
     </div>
     <script>
       document.getElementById("loginForm").addEventListener("submit", function(e) {

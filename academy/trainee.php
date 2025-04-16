@@ -3,11 +3,11 @@
 ?>
 <!doctype html>
 <html lang="en">
-<?php include("head.php"); ?>
+<?php include("include/head.php"); ?>
 <body>
     <div class="wrapper">
-        <?php include("top.php");?>
-        <?php include("left.php");?>
+        <?php include("include/top.php");?>
+        <?php include("include/left.php");?>
         <div class="page-wrapper">
             <div class="page-content">
                 <div class="page-title-box">
@@ -131,7 +131,7 @@
                 </div>
                 <?php include("modal/addTrainee.php");?>
             </div>
-            <?php include("footer.php"); ?>
+            <?php include("include/footer.php"); ?>
         </div>
     </div>
     </body>

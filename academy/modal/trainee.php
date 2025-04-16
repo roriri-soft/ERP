@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
 
-                                  <!-- Course -->
+                                  
                                 <div class="col-md-6">
                                     <label><b>Course</b> <span class="text-danger">*</span></label>
                                     <select id="course" class="form-select">
@@ -55,7 +55,7 @@
                                     </select>
                                 </div>
 
-                                <!-- Duration Dropdown -->
+                               
                                 <div class="col-md-6">
                                     <label><b>Duration</b> <span class="text-danger">*</span></label>
                                     <select id="duration" class="form-select">
@@ -63,24 +63,17 @@
                                     </select>
                                 </div>
 
-                                <!-- Fee -->
+                                
                                 <div class="col-md-6 mt-3">
                                     <label><b>Fee</b></label>
                                     <input type="number" id="fee" class="form-control" readonly>
                                 </div>
 
-                                <!-- Discount -->
-                                <div class="col-md-6 mt-3">
+
+                                   <div class="col-md-6 mt-3">
                                     <label><b>Discount</b></label>
                                     <input type="text" id="discount" class="form-control" readonly>
-                                </div>
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group pb-3">
-                                        <label for="fee_amount" class="form-label"><b>Fee Amount</b><span class="text-danger">*</span></label>
-                                        <input type="number" class="form-control" placeholder="Enter Fee Amount" name="fee_amount" id="fee_amount">
-                                        <div id="fee_amountError" style="color: red" class="error-message">Fee Amount is required.</div>
-                                    </div>
-                                </div> -->
+                                </div>                             
                             </div>
                         </div>     
                         <div class="col-12 mt-2">
