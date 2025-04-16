@@ -39,7 +39,6 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= htmlspecialchars($subject['name']) ?></h5>
-                                    <p><strong>Status:</strong> <?= htmlspecialchars($subject['status']) ?></p>                                     
                                     <button type="button" class="btn btn-success text-white mb-2" onclick="window.location.href='syllabus.php?id=<?php echo $subject['id']; ?>';">                                            
                                     <i class="bx bx-book-open"></i> View Syllabus
                                     </button>

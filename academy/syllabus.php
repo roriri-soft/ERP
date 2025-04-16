@@ -61,7 +61,7 @@
                                     </tr>
                                     <?php
                                     }
-                                mysqli_free_result($Viewsubject);
+                                mysqli_free_result($viewSubject);
                             ?>
                         </tbody>
                     </table>

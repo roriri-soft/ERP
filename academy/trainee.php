@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <?php include("modal/addTrainee.php");?>
+                <?php include("modal/trainee.php");?>
             </div>
             <?php include("include/footer.php"); ?>
         </div>
